@@ -24,24 +24,24 @@ for i in range(0,5):
         y1 = j*100
         y2 = (j+1)*100
         blank[x1:x2, y1:y2] = x1,y1,x2*y2    
-        print(x1,x2,y1,y2)
+        # print(x1,x2,y1,y2)
 
-cv.imshow('Colors', blank)
+# cv.imshow('Colors', blank)
 
 # 2. Draw a Rectangle
-cv.rectangle(blank, (0,0), (blank.shape[1]//2, blank.shape[0]//2), (0,255,0), thickness=-1)
-cv.imshow('Rectangle', blank)
+cv.rectangle(blank, (0,0), (blank.shape[1]//2, blank.shape[0]//2), (12,152,90), thickness=-1)
+# cv.imshow('Rectangle', blank)
 
-# # 3. Draw A circle
-# cv.circle(blank, (blank.shape[1]//2, blank.shape[0]//2), 40, (0,0,255), thickness=-1)
+# 3. Draw A circle
+cv.circle(blank, (blank.shape[1]//2, blank.shape[0]//2), 40, (40,200,230), thickness=-1)
 # cv.imshow('Circle', blank)
 
-# # 4. Draw a line
-# cv.line(blank, (100,250), (300,400), (255,255,255), thickness=3)
+# 4. Draw a line
+cv.line(blank, (100,250), (300,400), (125,126,90), thickness=3)
 # cv.imshow('Line', blank)
 
-# # 5. Write text
-# cv.putText(blank, 'Hello, my name is Jason!!!', (0,225), cv.FONT_HERSHEY_TRIPLEX, 1.0, (0,255,0), 2)
-# cv.imshow('Text', blank)
+# 5. Write text
+cv.putText(blank, 'Hello, my name is Zneroke!!!', (0,30), cv.FONT_HERSHEY_TRIPLEX, .85, (50,80,120), 1)
+cv.imshow('Text', blank)
 
 cv.waitKey(0)
