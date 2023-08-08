@@ -18,20 +18,23 @@ def translate(img, x, y):
 # y --> Down
 
 translated = translate(img, -100, 100)
-cv.imshow('Translated', translated)
+# cv.imshow('Translated', translated)
 
 # Rotation
 def rotate(img, angle, rotPoint=None):
     (height,width) = img.shape[:2]
 
+    # rotate around image center if rotPoint is None:
     if rotPoint is None:
-        rotPoint = (width//2,height//2)
+        rotPoint = (width//2,height//2) 
     
     rotMat = cv.getRotationMatrix2D(rotPoint, angle, 1.0)
     dimensions = (width,height)
 
     return cv.warpAffine(img, rotMat, dimensions)
 
+# negative values -> clockwise rotation
+# positive values -> counterclockwise rocktation
 rotated = rotate(img, -45)
 cv.imshow('Rotated', rotated)
 
@@ -39,7 +42,7 @@ rotated_rotated = rotate(img, -90)
 cv.imshow('Rotated Rotated', rotated_rotated)
 
 # Resizing
-resized = cv.resize(img, (500,500), interpolation=cv.INTER_CUBIC)
+resized = cv.resize(img, (500,500), interpolation=cv.INTER_CUBIC) #cv.INTER_AREA (for shrinking); cv.INTER_LINEAR (for enlarging); cv.INTER_CUBIC (for enlarging, is slower but higher Quality)
 cv.imshow('Resized', resized)
 
 # Flipping
