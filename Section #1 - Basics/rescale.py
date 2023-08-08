@@ -26,8 +26,7 @@ def changeRes(width, height):
 capture = cv.VideoCapture('../Resources/Videos/dog.mp4')
 
 while True:
-    isTrue, frame = capture.read()
-    print(frame.type())    
+    isTrue, frame = capture.read() 
     frame_resized = rescaleFrame(frame)
 
     if isTrue:
