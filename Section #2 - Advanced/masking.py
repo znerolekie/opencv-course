@@ -3,6 +3,9 @@
 import cv2 as cv
 import numpy as np
 
+# intuition:
+# a goal could be to mask all regions of a region except the faces of the people in the image
+# size of the musk must be the same size as the image
 img = cv.imread('../Resources/Photos/cats 2.jpg')
 cv.imshow('Cats', img)
 
