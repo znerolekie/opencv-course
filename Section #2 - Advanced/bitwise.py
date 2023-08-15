@@ -3,6 +3,10 @@
 import cv2 as cv
 import numpy as np
 
+# bitwise operators used a lot in masking tasks
+# operate on a binary manner
+# pixels can be on or off
+
 blank = np.zeros((400,400), dtype='uint8')
 
 rectangle = cv.rectangle(blank.copy(), (30,30), (370,370), 255, -1)
